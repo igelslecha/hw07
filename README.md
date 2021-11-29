@@ -8,8 +8,8 @@
 
 screen1
 
-* дописал в конце строки начинающейся с linux16  "init=/bin/sh" и нажал сtrl-x*
-* 
+*дописал в конце строки начинающейся с linux16  "init=/bin/sh" и нажал сtrl-x*
+ 
 screen2
 
 *перемонтирую для чтения "mount -o remount,rw /" и убеждаюсь, что диск доступен "mount | grep root"*
@@ -20,7 +20,7 @@ screen3
 
 screen4
 
-* загружаюсь *
+*загружаюсь*
 
 screen5
 
@@ -32,7 +32,7 @@ screen6
 
 screen7
 
-*в) При загрузке машины нажимаю "Е" (edit) заменил в  строке начинающейся с linux16 "ro" на "rw init=/sysroot/bin/sh" *
+*в) При загрузке машины нажимаю "Е" (edit) заменил в  строке начинающейся с linux16 "ro" на "rw init=/sysroot/bin/sh"*
 
 screen8
 
@@ -43,3 +43,25 @@ screen9
 **2. Запустил систему , проверяю текущее состояние ситемы "vgs" и переименовываю "vgrename centos OtusRoot"**
 
 screen10
+
+*поправил /etc/fstab, /etc/default/grub, /boot/grub2/grub.cfg и пересоздал initrd image, чтобы он знал новое название*
+
+screen11
+
+*Перезагрузился и проверяю новое имя*
+
+screen12
+
+**3. Добавить модуль в initrd**
+
+*Создаю папку /usr/lib/dracut/modules.d/01test, добавляю в неё скрипты из приктики (module-setup.sh и test.sh) и правлю скрипт с пингвином*
+
+screen13
+
+*Пересобираю образ initrd*
+
+screen14
+
+*перезагружаю и проверяю*
+
+screen15
