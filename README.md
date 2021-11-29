@@ -24,7 +24,7 @@ screen4
 
 screen5
 
-* перемонтирую основной каталог с правами на чтение "mount -o remount,rw /sysroot", делаем основным для работы "chroot /sysroot", меняем пароль на 12345 "passwd root", создаю файл "touch /.autorelabel"*
+*перемонтирую основной каталог с правами на чтение "mount -o remount,rw /sysroot", делаем основным для работы "chroot /sysroot", меняем пароль на 12345 "passwd root", создаю файл "touch /.autorelabel"*
 
 screen6
 
